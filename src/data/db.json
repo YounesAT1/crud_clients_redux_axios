@@ -1,0 +1,18 @@
+{
+  "clients": [
+    {
+      "id": 1703514362663,
+      "fullName": "Ana",
+      "email": "Ana@gmail.com",
+      "phoneNumber": "123-456-789",
+      "presenceStatus": "Available"
+    },
+    {
+      "fullName": "Ana 3awtani",
+      "email": "Ana3awtani@gmail.com",
+      "presenceStatus": "Unavailable",
+      "phoneNumber": "987-645-990",
+      "id": 1703516285363
+    }
+  ]
+}

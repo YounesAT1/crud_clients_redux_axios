@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "start"]
+RUN Set-ExecutionPolicy Unrestricted -Scope Process ; \
+    json-server --watch src/data/db.json --port 3004 & \
+    npm start

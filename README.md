@@ -1,58 +1,70 @@
-# Client Management using _create-react-app_
+# Getting Started with Create React App
 
-## Description
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### This React application allows users to manage clients, including functionalities to add, update, and delete clients, search clients by full name, see the total number of clients, and receive notifications for successful or erroneous operations.
+## Available Scripts
 
-## Technologies Used
+In the project directory, you can run:
 
-- React
-- React Hot Toast (for notifications)
-- Axios (for API requests)
-- Redux & Redux Toolkit
-- Redux Thunk (for asynchronous actions)
-- Redux Logger (for debugging)
-- JSON Server (for mock API)
-- React Router DOM (for routing)
-- Tailwind CSS (for styling)
+### `npm start`
 
-## Setup Instructions
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### 1- Clone the repository
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```
-git clone https://github.com/YounesAT1/crud_clients_redux_axios.git
-```
+### `npm test`
 
-### 2- Install Dependencies
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-npm install
-```
+### `npm run build`
 
-### 3- Run in the terminal
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### 4- Start the JSON web server API
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```
-json-server --watch src\data\db.json --port 3004
-```
+### `npm run eject`
 
-### 5- Start React App
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```
-npm start
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Usage
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- Upon starting the app, navigate to `http://localhost:3000` in your browser.
-- You can perform the following actions:
-- **Add a Client:** Click on the "Add Client" button and fill in the required client information. If any field is missing, an error notification will appear.
-- **Update a Client:** Click on the "Edit" button beside a client entry to update their information.
-- **Delete a Client:** Click on the "Delete" button beside a client entry. A confirmation dialog will appear before deletion.
-- **Search by Full Name:** Use the search bar to look for clients by their full name. If no clients exist, the table will display "No clients."
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

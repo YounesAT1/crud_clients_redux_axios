@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+
 import { deleteClient, fetchClients } from "../redux/actions";
 import Loading from "./Loading";
 import Error from "./Error";
-import { Link } from "react-router-dom";
-import toast from "react-hot-toast";
 
 const ClientsList = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,18 @@ const ClientsList = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [clientToDelete, setClientToDelete] = useState(null);
+
+  const filteredClients = clients.filter((client) =>
+    client.fullName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const availableClients = clients.filter(
+    (client) => client.presenceStatus === "Available"
+  );
+
+  const unAvailableClients = clients.filter(
+    (client) => client.presenceStatus === "Unavailable"
+  );
 
   useEffect(() => {
     dispatch(fetchClients());
@@ -36,19 +49,15 @@ const ClientsList = () => {
     );
   }
 
-  const handleDeleteClient = (clientIdToDelete) => {
+  const handleDeleteClient = async (clientIdToDelete) => {
     try {
-      dispatch(deleteClient(clientIdToDelete));
+      await dispatch(deleteClient(clientIdToDelete));
       dispatch(fetchClients());
       setShowDeleteModal(false);
     } catch (error) {
       toast.error(error.message);
     }
   };
-
-  const filteredClients = clients.filter((client) =>
-    client.fullName.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -78,9 +87,30 @@ const ClientsList = () => {
           }`}
           disabled={clients.length === 0}
         />
-        <h1 className="w-[180px] text-2xl mb-4 p-2 rounded-md text-slate-700 bg-slate-200 font-semibold text-center">
+
+        <h1
+          className={`w-[180px] text-2xl mb-4 p-2 rounded-md text-white font-semibold text-center ${
+            clients.length === 0 ? "bg-slate-200" : "bg-slate-500"
+          }`}
+        >
           {clients.length === 1 ? "Client" : "Clients"} : (
           {filteredClients.length})
+        </h1>
+
+        <h1
+          className={`w-[200px] text-2xl mb-4 p-2 rounded-md text-white font-semibold text-center ${
+            availableClients.length === 0 ? "bg-green-200" : "bg-green-500"
+          }`}
+        >
+          Available : ({availableClients.length})
+        </h1>
+
+        <h1
+          className={`w-[200px] text-2xl mb-4 p-2 rounded-md text-white  font-semibold text-center ${
+            unAvailableClients.length === 0 ? "bg-orange-200" : "bg-orange-500"
+          }`}
+        >
+          Unavailable : ({unAvailableClients.length})
         </h1>
       </div>
       <table className="min-w-full divide-y divide-gray-200">
@@ -156,7 +186,7 @@ const ClientsList = () => {
             <tr>
               <td
                 colSpan={6}
-                className="px-6 py-4 whitespace-nowrap bg-slate-600 text-white text-center text-xl font-semibold"
+                className="px-6 py-4 whitespace-nowrap bg-slate-600 text-white text-center text-xl font-semibold rounded-b-md"
               >
                 No clients
               </td>

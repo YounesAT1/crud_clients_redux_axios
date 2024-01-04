@@ -56,3 +56,18 @@ npm start
 - **Update a Client:** Click on the "Edit" button beside a client entry to update their information.
 - **Delete a Client:** Click on the "Delete" button beside a client entry. A confirmation dialog will appear before deletion.
 - **Search by Full Name:** Use the search bar to look for clients by their full name. If no clients exist, the table will display "No clients."
+
+  # The website is live you can visit it by :
+  ### 1- starting the JSON WEB SERVER IN  YOUR PROJECT DIRECTORY BY EXECUTING :
+  ## * First
+   ```
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+    ```
+  ## * Then
+  ```
+  json-server --watch src\data\db.json --port 3004
+  ```
+  
+   
+  
+   

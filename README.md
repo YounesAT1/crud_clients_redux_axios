@@ -56,9 +56,3 @@ npm start
 - **Update a Client:** Click on the "Edit" button beside a client entry to update their information.
 - **Delete a Client:** Click on the "Delete" button beside a client entry. A confirmation dialog will appear before deletion.
 - **Search by Full Name:** Use the search bar to look for clients by their full name. If no clients exist, the table will display "No clients."
-
-  ```
-  
-   
-  
-   

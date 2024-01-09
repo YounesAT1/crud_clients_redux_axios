@@ -1,3 +1,18 @@
 {
-  "clients": []
+  "clients": [
+    {
+      "fullName": "John Doe",
+      "email": "Jo@gmail.com",
+      "presenceStatus": "Unavailable",
+      "phoneNumber": "+242-0938-245",
+      "id": 1704809119048
+    },
+    {
+      "fullName": "Stefan Smith",
+      "email": "Stef@gmail.com",
+      "presenceStatus": "Available",
+      "phoneNumber": "+873-9873-828",
+      "id": 1704809152963
+    }
+  ]
 }

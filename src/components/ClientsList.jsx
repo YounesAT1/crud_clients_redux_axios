@@ -71,7 +71,6 @@ const ClientsList = () => {
   const closeDeleteModal = () => {
     setShowDeleteModal(false);
     setClientToDelete(null);
-    dispatch(fetchClients());
   };
 
   return (

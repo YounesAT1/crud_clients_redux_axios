@@ -57,7 +57,7 @@ export const addClient = (client) => (dispatch) => {
     axios
       .post(process.env.REACT_APP_API_URL, client)
       .then(dispatch(addClientAction()));
-    toast.success("Client deleted successfully");
+    toast.success("Client added successfully");
   } catch (error) {
     dispatch(error.message);
     toast.error("something went wrong !!");
